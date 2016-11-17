@@ -43,6 +43,7 @@ RUN php5enmod mcrypt
 WORKDIR /var/simplesamlphp
 RUN curl -sS https://getcomposer.org/installer | php
 RUN php composer.phar install
+RUN chmod 777 -R /var/lib/php5
 
 ####################
 # Final bits

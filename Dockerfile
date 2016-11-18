@@ -15,7 +15,7 @@ RUN apt-get install -y apache2
 RUN apt-get install -y apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils openssl-blacklist
 RUN apt-get install -y libmcrypt-dev mcrypt
 RUN apt-get install -y php5 libapache2-mod-php5 php5-mcrypt php-pear
-RUN apt-get install -y php5-common php5-cli php5-curl php5-gmp php5-ldap
+RUN apt-get install -y php5-common php5-cli php5-curl php5-gmp php5-ldap php5-sqlite
 RUN apt-get install -y libapache2-mod-gnutls
 RUN a2enmod gnutls
 
@@ -27,9 +27,6 @@ RUN git clone https://github.com/simplesamlphp/simplesamlphp.git /var/simplesaml
 
 RUN mkdir -p /var/simplesamlphp/config && cp -r /var/simplesamlphp/config-templates/* /var/simplesamlphp/config/
 RUN mkdir -p /var/simplesamlphp/metadata && cp -r /var/simplesamlphp/metadata-templates/* /var/simplesamlphp/metadata/
-
-ADD ./etc/simplesamlphp/config/config.php /var/simplesamlphp/config/config.php
-ADD ./etc/apache2/sites-enabled/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
 ####################
 # PKI
@@ -43,6 +40,16 @@ RUN php5enmod mcrypt
 WORKDIR /var/simplesamlphp
 RUN curl -sS https://getcomposer.org/installer | php
 RUN php composer.phar install
+
+ADD ./etc/simplesamlphp/cert/server.crt /var/simplesamlphp/cert/server.crt
+ADD ./etc/simplesamlphp/cert/server.pem /var/simplesamlphp/cert/server.pem
+ADD ./etc/simplesamlphp/config/authsources.php /var/simplesamlphp/config/authsources.php
+ADD ./etc/simplesamlphp/config/config.php /var/simplesamlphp/config/config.php 
+ADD ./etc/simplesamlphp/metadata/saml20-idp-hosted.php /var/simplesamlphp/metadata/saml20-idp-hosted.php
+ADD ./etc/simplesamlphp/metadata/saml20-idp-remote.php /var/simplesamlphp/metadata/saml20-idp-remote.php
+ADD ./etc/simplesamlphp/metadata/saml20-sp-remote.php /var/simplesamlphp/metadata/saml20-sp-remote.php
+ADD ./etc/simplesamlphp/modules/exampleauth/enable /var/simplesamlphp/modules/exampleauth/enable
+ADD ./etc/apache2/sites-enabled/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 RUN chmod 777 -R /var/lib/php5
 
 ####################

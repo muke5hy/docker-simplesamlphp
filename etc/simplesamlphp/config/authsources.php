@@ -62,13 +62,14 @@ $config = array(
         ),*/
     ),
 
+    /*
     'dubdev-adfs' => array(
         'saml:SP',
         'idp' => 'https://dubdevdc.dubdev.com/adfs/services/trust',
         'privatekey' => 'saml.pem',
         'certificate' => 'saml.crt',
     ),
-
+    */
     /*
     'example-sql' => array(
         'sqlauth:SQL',
@@ -88,7 +89,7 @@ $config = array(
     ),
     */
 
-    /*
+    /* [kuisathaverat] Configuring the authentication module */
     'example-userpass' => array(
         'exampleauth:UserPass',
 
@@ -106,7 +107,6 @@ $config = array(
             'eduPersonAffiliation' => array('member', 'employee'),
         ),
     ),
-    */
 
     /*
     'crypto-hash' => array(

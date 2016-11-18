@@ -204,9 +204,10 @@ $config = array(
      * one of the functionalities below, but in some cases you could run multiple functionalities.
      * In example when you are setting up a federation bridge.
      */
-    'enable.saml20-idp' => false,
+     /* [kuisathaverat] Enabling the Identity Provider functionality */
+    'enable.saml20-idp' => true,
     'enable.shib13-idp' => false,
-    'enable.adfs-idp' => true,
+    'enable.adfs-idp' => false,
     'enable.wsfed-sp' => false,
     'enable.authmemcookie' => false,
 

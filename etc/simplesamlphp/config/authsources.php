@@ -98,14 +98,22 @@ $config = array(
         //'remember.username.enabled' => FALSE,
         //'remember.username.checked' => FALSE,
 
-        'student:studentpass' => array(
-            'uid' => array('test'),
-            'eduPersonAffiliation' => array('member', 'student'),
+        'tesla:password' => array(
+            'uid' => array('tesla'),
+            'displayName' => 'Tesla',
+            'groups' => array('developer','browser'),
         ),
-        'employee:employeepass' => array(
-            'uid' => array('employee'),
-            'eduPersonAffiliation' => array('member', 'employee'),
+        'curie:password' => array(
+            'uid' => array('curie'),
+            'displayName' => 'Curie',
+            'groups' => array('browser'),
         ),
+        'nobel:password' => array(
+            'uid' => array('nobel'),
+            'displayName' => 'Nobel',
+            'groups' => array('administrator'),
+        ),
+
     ),
 
     /*

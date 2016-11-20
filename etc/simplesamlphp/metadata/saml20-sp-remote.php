@@ -17,10 +17,7 @@ $metadata['http://cjoc.example.com:9090/securityRealm/finishLogin'] = array (
       'cn' => 'urn:mace:dir:attribute-def:cn',
       'displayName' => 'urn:mace:dir:attribute-def:displayName',
       'mail' => 'urn:mace:dir:attribute-def:mail',
-      'eduPersonPrincipalName' => 'urn:mace:dir:attribute-def:eduPersonPrincipalName',
-      'eduPersonEntitlement' => 'urn:mace:dir:attribute-def:eduPersonEntitlement',
-      'eduPersonAffiliation' => 'urn:mace:dir:attribute-def:eduPersonAffiliation',
-      'schacHomeOrganization' => 'urn:mace:terena.org:attribute-def:schacHomeOrganization',
+      'groups' => 'urn:mace:dir:attribute-def:groups',
     ),
   ),
 );

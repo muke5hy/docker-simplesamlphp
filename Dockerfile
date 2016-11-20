@@ -30,7 +30,7 @@ RUN mkdir -p /var/simplesamlphp/metadata && cp -r /var/simplesamlphp/metadata-te
 
 ####################
 # PKI
-RUN mkdir -p /var/simplesamlphp/cert && openssl req -x509 -batch -nodes -newkey rsa:2048 -keyout /var/simplesamlphp/cert/saml.pem -out /var/simplesamlphp/cert/saml.crt
+# RUN mkdir -p /var/simplesamlphp/cert && openssl req -x509 -batch -nodes -newkey rsa:2048 -keyout /var/simplesamlphp/cert/saml.pem -out /var/simplesamlphp/cert/saml.crt
 
 ####################
 # Composer

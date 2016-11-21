@@ -65,3 +65,5 @@ docker rmi SimpleSAMLphp
 [Using SimpleSAMLphp to Authenticate against ADFS 2.0 IdP](https://groups.google.com/forum/#!msg/simplesamlphp/I8IiDpeKSvY/URSlh-ssXQ4J)
 
 [Configuring HTTPS on Apache with GnuTLS](https://help.ubuntu.com/community/GnuTLS)
+
+This is a fork from [docker-simplesamlph](https://github.com/jnyryan/docker-simplesamlph)

@@ -42,9 +42,11 @@ password: password
 
 There are three users configured on Idp named simpleSAMLphpIdpHosted
 
+```
 username: tesla, password: password
 username: curie, password: password
 username: nobel, password: password
+```
 
 ### Cleanup
 

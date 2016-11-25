@@ -22,8 +22,8 @@ $metadata['http://jenkins.example.com:9090/securityRealm/finishLogin'] = array (
   ),
 );
 $metadata['http://jenkins.example.com:8080/securityRealm/finishLogin'] = array (
-  'AssertionConsumerService' => 'http://jenkins.example.com:9090/securityRealm/finishLogin',
-  'SingleLogoutService' => 'http://jenkins.example.com:9090/securityRealm/logOut',
+  'AssertionConsumerService' => 'http://jenkins.example.com:8080/securityRealm/finishLogin',
+  'SingleLogoutService' => 'http://jenkins.example.com:8080/securityRealm/logOut',
   'authproc' => array(
     /* add schacHomeOrganization attribute */
     10 => array(

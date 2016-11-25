@@ -19,9 +19,8 @@ $metadata['SimpleSAMLAuthExampleIdpRemote'] = array(
   ),
   'Logo' => array(
     array(
-     'url' => 'https://www.cloudbees.com/sites/all/themes/custom/cb_2016rev2/images/cloudbees-logo.png',
-     'height' => 51,
-     'width' => 107,
+     'url' => 'https://jenkins.io/images/226px-Jenkins_logo.svg.png',
+     'height' => 51
     ),
   ),
 ),

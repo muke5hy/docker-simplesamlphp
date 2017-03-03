@@ -16,7 +16,7 @@ Docker installed and running.
 The following commands will download the Ubuntu Images and provision the Docker image. All software will be installed and once completed SimpleSAMLphp will be ready to use. 
 
 ``` bash
-git clone https://github.com/kuisathaverat/docker-simplesamlphp.git
+git clone https://github.com/muke5hy/docker-simplesamlphp.git
 cd docker-simplesamlphp
 sh run.sh
 ```
@@ -68,4 +68,4 @@ docker rmi SimpleSAMLphp
 
 [Configuring HTTPS on Apache with GnuTLS](https://help.ubuntu.com/community/GnuTLS)
 
-This is a fork from [docker-simplesamlph](https://github.com/jnyryan/docker-simplesamlph)
+This is a fork from [docker-simplesamlph](https://github.com/kuisathaverat/docker-simplesamlph)
